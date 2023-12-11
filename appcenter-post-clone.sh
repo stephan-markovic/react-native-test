@@ -1,3 +1,6 @@
 #!/usr/bin/env bash
 
-ulimit -a
+echo "Current limit is: $(ulimit -n)"
+echo "x=\"$(( $(ulimit -n)*2 ))\"" >> ~/.bashrc
+echo "ulimit -n \$x" >> ~/.bashrc
+
